@@ -1,0 +1,28 @@
+MY FINANCE 2.8
+
+Archivos:
+- index.html: aplicación principal.
+- manifest.webmanifest: configuración PWA.
+- sw.js: caché y funcionamiento offline de recursos locales.
+- icon.svg: icono de la aplicación.
+
+Cambios 2.8:
+- Escala vertical no lineal asinh para reducir la compresión visual por movimientos extremos.
+- Etiquetas del eje vertical convertidas de vuelta a importes monetarios.
+- Altura visual mínima de 4 px para cuerpos pequeños, con marcador amarillo cuando se aplica.
+- Historial integrado junto a la gráfica en pantallas grandes y debajo en móviles.
+- Selección sincronizada entre filas del historial y velas por identificador único.
+- Ficha con importes reales, patrimonio anterior/posterior y variación.
+- Controles Y+, Y− y Auto para la escala vertical.
+- Se conserva la clave de localStorage de la versión base para mantener datos existentes.
+- Corrección de capas visuales: los detalles y ventanas modales ahora se muestran por delante de las velas y del canvas de la gráfica.
+
+Notas técnicas:
+- 1 cm y 0.3 mm son medidas nominales CSS (37.795 px y 1.134 px a 96 dpi). El navegador y la densidad física de cada pantalla pueden cambiar su equivalencia física real.
+- La altura mínima de 4 px es una ayuda visual y no altera OHLC ni importes.
+- La transformación asinh hace que la escala vertical sea no lineal; las etiquetas se muestran mediante la transformación inversa.
+- Lightweight Charts se carga desde un CDN, por lo que la primera carga requiere conexión a Internet.
+
+Publicación: extraer el contenido del ZIP y subir los cuatro archivos principales a la raíz del repositorio GitHub Pages.
+
+Actualización 2.8: se elevó la capa de las ventanas modales y se aisló el contexto de apilamiento del área de gráfica para impedir que las velas se dibujen sobre los detalles.
