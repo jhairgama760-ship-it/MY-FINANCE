@@ -1,4 +1,4 @@
-MY FINANCE 2.8
+MY FINANCE 2.9
 
 Archivos:
 - index.html: aplicación principal.
@@ -26,3 +26,6 @@ Notas técnicas:
 Publicación: extraer el contenido del ZIP y subir los cuatro archivos principales a la raíz del repositorio GitHub Pages.
 
 Actualización 2.8: se elevó la capa de las ventanas modales y se aisló el contexto de apilamiento del área de gráfica para impedir que las velas se dibujen sobre los detalles.
+
+
+MY FINANCE 2.9: corrección de validaciones de retiros y cálculo de saldos mediante céntimos enteros.
